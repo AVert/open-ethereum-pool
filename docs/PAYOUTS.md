@@ -1,6 +1,7 @@
-**First of all make sure your Redis instance and backups are configured properly http://redis.io/topics/persistence.**
+**Прежде всего убедитесь что ваш Redis сервер и резервные копии правильно сконфигурированы http://redis.io/topics/persistence.**
 
-Keep in mind that pool maintains all balances in **Shannon**.
+Подразумевается что пул поддержывает все балансы в 
+Keep in mind that pool maintains all balances in **Shannon** (пока не понял что это за Шеннон)).
 
 # Processing and Resolving Payouts
 
