@@ -2,7 +2,7 @@
 
 Pool policy server collecting several stats on per IP basis. There are two options: `iptables+ipset` or simple application level bans. Banning is disabled by default.
 
-## Firewall Banning
+## Защита фаерволом (бан)
 
 First you need to configure your firewall to use `ipset`, read [this article](https://wiki.archlinux.org/index.php/Ipset).
 
@@ -14,6 +14,6 @@ Example `/etc/sudoers.d/pool` where `pool` is a username under which pool runs:
 
 If you need something simple, just set `ipset` name to blank string and simple application level banning will be used instead.
 
-## Limiting
+## Ограничивание
 
-Under some weird circumstances you can enforce limits to prevent connection flood to stratum, there are initial settings: `limit` and `limitJump`. Policy server will increase number of allowed connections per IP address on each valid share submission. Stratum will not enforce this policy for a `grace` period specified after stratum start.
+По каким то странным причинам вы можете ужесточить ограничения для защиты от атаки большого количества подключений к стратум серверу. Для этого есть изначальные настройки: `limit` and `limitJump`. Сервер безопасности (если он у вас выделеный) будет увеличивать число разрешенных соединений с одного IP адреса на для каждой отправленной валидной шары (решения). Стратум (сервер) не будет усиливать ограничения в так называемый `grace` период (период щедрости) начинающийся сразу после старта сервера.
